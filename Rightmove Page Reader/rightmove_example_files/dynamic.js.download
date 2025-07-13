@@ -1,0 +1,225 @@
+var template = {
+  version: "1.0.0",
+  width: 300,
+  height: 250,
+  elements: {
+    logo: {
+      name:"logo",
+      reportingDimension:"logo",
+      image: { src:"logo.png" },
+      width:61,
+      height:45
+    },
+    logo2: {
+      name:"logo2",
+      reportingDimension:"logo2",
+      image: { src:"logo2.png" },
+      width:28,
+      height:28
+    },
+    logo3: {
+      name:"logo3",
+      reportingDimension:"logo3",
+      image: { src:"logo3.png" },
+      width:45,
+      height:45
+    },
+    frame1Image: {
+      name:"frame1Image",
+      reportingDimension:"frame1Image",
+      image: { src:"frame1Image.png" }
+    },
+    frame1Image2: {
+      name:"frame1Image2",
+      reportingDimension:"frame1Image2",
+      image: { src:"frame1Image2.png" }
+    },
+    frame1Image3: {
+      name:"frame1Image3",
+      reportingDimension:"frame1Image3",
+      image: { src:"frame1Image3.png" }
+    },
+    frame1Image4: {
+      name:"frame1Image4",
+      reportingDimension:"frame1Image4",
+      image: { src:"frame1Image4.png" }
+    },
+    frame1Background: {
+      name:"frame1Background",
+      reportingDimension:"frame1Background",
+      image: { src:"frame1Background.png" }
+    },
+    frame3Background: {
+      name:"frame3Background",
+      reportingDimension:"frame3Background",
+      image: { src:"frame3Background.png" }
+    },
+    frame3Image: {
+      name:"frame3Image",
+      reportingDimension:"frame3Image",
+      image: { src:"frame3Image.png" },
+      width:35,
+      height:35
+    },
+    frame3Image2: {
+      name:"frame3Image2",
+      reportingDimension:"frame3Image2",
+      image: { src:"frame3Image2.png" },
+      width:35,
+      height:35
+    },
+    frame3Image3: {
+      name:"frame3Image3",
+      reportingDimension:"frame3Image3",
+      image: { src:"frame3Image3.png" },
+      width:35,
+      height:35
+    },
+    frame4Image: {
+      name:"frame4Image",
+      reportingDimension:"frame4Image",
+      image: { src:"frame4Image.png" },
+      width:27,
+      height:27
+    },
+    frame1Headline: {
+      name:"frame1Headline",
+      reportingDimension:"frame1Headline",
+      text: { value:"Schéi Blummen d’Kàchen op vun, un déi meescht d’Ka" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame2Headline: {
+      name:"frame2Headline",
+      reportingDimension:"frame2Headline",
+      text: { value:"Lorem ipsum dolor sit amet, id modo forensibus pro" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame3Headline: {
+      name:"frame3Headline",
+      reportingDimension:"frame3Headline",
+      text: { value:"SCHÉI BLUMMEN D’KÀCHEN OP VUN, UN D" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame4Headline: {
+      name:"frame4Headline",
+      reportingDimension:"frame4Headline",
+      text: { value:"TÊMPOR INIDĮDUNT<br><span style='color:#fff'>UT LABŌRE ĘT DOLORE ÁSE</span>" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame5Headline: {
+      name:"frame5Headline",
+      reportingDimension:"frame5Headline",
+      text: { value:"Lorem ipsum dolor sit amet, consecte uera…" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame3Subheadline: {
+      name:"frame3Subheadline",
+      reportingDimension:"frame3Subheadline",
+      text: { value:"MASSÅ<br>TINCĪDUNT<br><strong>NÛNC</strong>" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame3Subheadline2: {
+      name:"frame3Subheadline2",
+      reportingDimension:"frame3Subheadline2",
+      text: { value:"PÜLVINAR<br><strong>SÅPIEN ÊTLI</strong>" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame3Subheadline3: {
+      name:"frame3Subheadline3",
+      reportingDimension:"frame3Subheadline3",
+      text: { value:"ÜLLAMCORPĒR<br><strong>MÀLESUÅD</strong>" },
+      style: {
+        content:"normal"
+      }
+    },
+    frame4Subheadline: {
+      name:"frame4Subheadline",
+      reportingDimension:"frame4Subheadline",
+      text: { value:"SAVE £100<br>PER BOOKING*" },
+      style: {
+        content:"normal"
+      }
+    },
+    ctaText: {
+      name:"ctaText",
+      reportingDimension:"ctaText",
+      text: { value:"Fugiat nulla par" },
+      style: {
+        content:"normal"
+      }
+    },
+    ctaColor1: {
+      name:"ctaColor1",
+      text: { value:"#EF0000" }
+    },
+    endDate: {
+      name:"endDate",
+      reportingDimension:"endDate",
+      text: { value:"11/25/2022 23:59:00" }
+    },
+    customVariable: {
+      name:"customVariable",
+      reportingDimension:"customVariable",
+      text: { value:"?utm_should_be_added_here" }
+    },
+    customVariable2: {
+      name:"customVariable2",
+      reportingDimension:"customVariable2",
+      text: { value:"#092A5E" }
+    },
+    locationName: {
+      name:"locationName",
+      text: { value:" " }
+    },
+    trigger: {
+      name:"trigger",
+      reportingDimension:"trigger",
+      text: { value:"Live Happy" },
+      enum: [
+        { label:"Live Happy", value:"Live Happy" },
+        { label:"Countdown Timer", value:"Countdown Timer" }
+      ]
+    },
+    fontName: {
+      name:"fontName",
+      text: { value:"Ambit Font" },
+      enum: [
+        { label:"Ambit Font", value:"Ambit Font" },
+        { label:"TUI Type Font", value:"TUI Type Font" }
+      ]
+    },
+    landingPage: {
+      name:"landingPage",
+      reportingDimension:"landingPage",
+      url: { value:"https://www.tui.co.uk/" }
+    },
+    CSSstyle: {
+      name:"CSSstyle",
+      text: {value:"CSS Styling"}
+    },
+    Status: {
+      name:"Status",
+      text: { value:"Active" },
+      enum: [
+        { label:"Active", value:"Active" },
+        { label:"Archived", value:"Archived" }
+      ]
+    }
+  }
+};
+
+var runtime = new TemplateRuntime(template).start();

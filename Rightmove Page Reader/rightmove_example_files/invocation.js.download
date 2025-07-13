@@ -1,0 +1,97 @@
+var creativeSize = `${template.width}x${template.height}`; // Set the width and height of the ad.
+var devDynamicContent = {}; // Variable for studio invocation code.
+function exitCall() {
+  var exitURL = defaultValues.landingPage;
+  var urlSuffix = Enabler.getParameter('exit_suffix');
+  var symbol = (exitURL.indexOf('?') > -1) ? '&' : '?';
+  if (urlSuffix) {
+    while (urlSuffix.charAt(0) == '?' || urlSuffix.charAt(0) == '&') {
+      urlSuffix = urlSuffix.substring(1);
+    }
+    if (urlSuffix.indexOf('?') > -1) {
+      urlSuffix = urlSuffix.replace(/\?/g, '&');
+    }
+  }
+  exitURL = exitURL + symbol + urlSuffix;
+  Enabler.exitOverride('MainClick', exitURL);
+}
+var videoCuePoint = [
+  //"cuePoint:funcName" ex. "1:firstAninmation" please do not included the parenthesis after the function name.
+]
+function initDynamic() {
+  if (checkEnvironment() === 'tools') {
+    for (var i=0;i<Object.keys(defaultValues).length;i++) {
+      Object.keys(defaultValues)[i];
+    }
+  } else {
+    Enabler.setProfileId(10803619);
+
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1 = [{}];
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0]._id = 0;
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].id = "0051ad68-c219-49de-92b8-06416888f9f2";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].Reporting_Label = "3d678676-99e9-452a-83c1-9359bc73577e-dfed6979-eff2-48f4-9a3e-68dfc0cc5cd0-327ad24a-51d0-4b4e-bd2d-979a4bd517db-eYMkgXtp5B-eff0cf7c-6c24-45ca-ae63-ecf81e79f595-e2920a77f4eb554137088cba0807f0f2c3e7c86d1e61ed6854a4f49597b8ce95";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].Variant_name = "PRO_S25 LONG HAUL_16042025";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].Active = false;
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].logo = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].logo.Url = "https://app.smartly.io/warren/images/bc82d0cc-5d2b-454d-9465-9a0c6dfa5139/blob?TUI-Live-Happy-Stacked-Logo_RGB.png";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].logo2 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].logo2.Url = "https://app.smartly.io/warren/images/48efa3e3-d6d6-41e4-ae03-aca2e478d7bc/blob?blankPNG";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].logo3 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].logo3.Url = "https://app.smartly.io/warren/images/48efa3e3-d6d6-41e4-ae03-aca2e478d7bc/blob?blankPNG";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].Status = "Active";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].ctaText = "BOOK NOW";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].endDate = "11\/25\/2022 23:59:00";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].trigger = "Live Happy";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].CSSstyle = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].fontName = "Ambit Font";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].ctaColor1 = "#EF0000";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image.Url = "https://app.smartly.io/warren/images/48efa3e3-d6d6-41e4-ae03-aca2e478d7bc/blob?blankPNG";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Image = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Image.Url = "https://app.smartly.io/warren/images/d02d2995-cdcc-4c8f-9270-8f874f1a97e3/blob?icon_cv";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame4Image = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame4Image.Url = "https://app.smartly.io/warren/images/48efa3e3-d6d6-41e4-ae03-aca2e478d7bc/blob?blankPNG";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].landingPage = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].landingPage.Url = "https://www.tui.co.uk/destinations/deals/package-holiday-deals";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].CreativeName = "PRO_S25 LONG HAUL_16042025_320x50";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image2 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image2.Url = "https://app.smartly.io/warren/images/278b139d-6f1f-45b7-9b50-41791de116fb/blob?wave 320x50.png 2";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image3 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image3.Url = "https://app.smartly.io/warren/images/d2ade6a6-a681-474a-9c57-bb0e3effda2d/blob?120x600_Frame.png";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image4 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Image4.Url = "https://app.smartly.io/warren/images/f4c51647-3e99-4867-90a1-dc1dffba90c8/variations/8d3c97cd-9431-445b-a886-6ed2c610726d/blob?TC-BLUE-320x50.png";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Image2 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Image2.Url = "https://app.smartly.io/warren/images/fee8db6a-f277-460c-b924-cf424db38ce8/blob?icon2 2";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Image3 = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Image3.Url = "https://app.smartly.io/warren/images/4add29ba-4e60-425a-a36c-f187e26f7efe/blob?icon3";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].locationName = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].URL_Parameter = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].customVariable = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Headline = "Go long haul for less this summer";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame2Headline = "Save up to \u00A3800 per couple*";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Headline = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame4Headline = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame5Headline = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].customVariable2 = "0";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Background = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame1Background.Url = "https://app.smartly.io/warren/images/9e8669e6-2e1e-42d2-884f-e91408b8b63e/variations/504d6a53-583b-4891-8a81-651c5f4d091e/blob?PRO_S25_LONG_HAUL_16042025_320x50.jpeg";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Background = {};
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Background.Url = "https://app.smartly.io/warren/images/2f1f2652-3320-44a3-bd43-964a4e0ba8d8/variations/19be1903-4927-4ef5-ac34-c76e371f7083/blob?frame3Background_320x50.png";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Subheadline = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame4Subheadline = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Subheadline2 = "";
+    devDynamicContent.TUI_UK_DR_PRO_ALWAYSON_031125_Sheet1[0].frame3Subheadline3 = "";
+    Enabler.setDevDynamicContent(devDynamicContent);
+    // paste studio invocation code here, and delete the devDynamicContent declaration as it is already declared outside this function.
+    
+    Adlib.assignInvocationCode(); // DO NOT DELETE THIS CODE, This will automatically assign invocation code to defaultValues
+  }
+}
+function populate() {
+  //Adlib.preloadDelay = 100;
+  //Adlib.fpsSettings(60); // uncomment this if you want to change the FPS used in the creative          
+  Adlib.populateElements(); // DO NOT DELETE THIS. automatically assign the defaultValues to the elements within the ad.
+  /*****************************************
+  If you need to manually assign a defaultValue to a style of an element, add it below.
+  *****************************************/
+};

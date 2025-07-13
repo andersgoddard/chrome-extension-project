@@ -1,0 +1,32 @@
+# Credential and config files
+epc_creds.txt
+*.secrets
+*.env
+
+# Data artifacts
+*.xlsx
+*.csv
+*.json
+*.png
+*.jpg
+
+# Python build junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# IDE/workspace files
+.vscode/
+*.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Test outputs and temporary files
+tests/__pycache__/
+tmp/
