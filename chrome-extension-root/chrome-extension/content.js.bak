@@ -1,0 +1,64 @@
+function extractPostcodeAndEpc(html) {
+  const marker = "window.adInfo =";
+  const startIndex = html.indexOf(marker);
+  if (startIndex === -1) return null;
+
+  const jsonStart = html.indexOf("{", startIndex);
+  let braceDepth = 0;
+  let jsonEnd = -1;
+
+  for (let i = jsonStart; i < html.length; i++) {
+    if (html[i] === "{") braceDepth++;
+    else if (html[i] === "}") {
+      braceDepth--;
+      if (braceDepth === 0) {
+        jsonEnd = i + 1;
+        break;
+      }
+    }
+  }
+
+  if (jsonEnd === -1) return null;
+
+  const jsonStr = html.substring(jsonStart, jsonEnd);
+
+  try {
+    const data = JSON.parse(jsonStr);
+    const propertyData = data.propertyData || {};
+    const address = propertyData.address || {};
+    const outcode = address.outcode || "";
+    const incode = address.incode || "";
+    const postcode = outcode && incode ? `${outcode} ${incode}` : null;
+
+    const epcGraphs = propertyData.epcGraphs || [];
+    const epcUrl = epcGraphs.length > 0 ? epcGraphs[0].url : null;
+
+    return {
+      postcode,
+      epc_url: epcUrl
+    };
+  } catch (e) {
+    console.error("Failed to parse JSON:", e);
+    return null;
+  }
+}
+
+const html = document.documentElement.innerHTML;
+const result = extractPostcodeAndEpc(html);
+
+if (!result || !result.postcode) return;
+
+const payload = {
+  url: window.location.href,
+  postcode: result.postcode,
+  epc_url: result.epc_url || null
+};
+
+fetch("https://YOUR-BACKEND-URL.com/add-rightmove", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload)
+})
+  .then(res => res.json())
+  .then(res => console.log("Sent to backend:", res))
+  .catch(err => console.error("Failed to send:", err));
