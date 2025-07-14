@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Activity Monitor",
+  "version": "1.0",
+  "description": "Logs postcode and EPC URL on Rightmove property pages",
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["https://www.rightmove.co.uk/properties/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
