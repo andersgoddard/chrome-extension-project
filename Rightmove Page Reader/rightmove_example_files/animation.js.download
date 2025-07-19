@@ -1,0 +1,192 @@
+// call Adlib.screenshotterEnd() on the last animation code.
+// do not delete initAnimation function since this is the first function that will be called after initialization of defaultValues.
+// if ever there is a video for this ad, you can use myVideo as the variable to play the video.
+// sample tween codes:
+// tween.to("#disclaimerWrapper", {opacity:0.99,duration: 1,ease: "power2.out"},"-=1");
+// tween.set("#frame1HeadlineWrapper",{opacity:1})
+let tl,frames,endWave=false;
+function initAnimation() {
+     // place all fluid elements before text resize and css attrib.
+     initializeValues();
+     Adlib.textResize(); // This is optional if your build doesn't use text resize you can delete this
+     Adlib.templateCSS(this); // DO NOT DELETE THIS
+     adjustFont(); // Font adjustment for other browsers
+     startAnimation();
+}
+function startAnimation() {
+     document.querySelector("#mainContent").style.opacity = 1;
+     // Check if frames are off.
+     frames = [Adlib.isEmpty(defaultValues.frame2Headline),
+               Adlib.isEmpty(defaultValues.frame3Headline),
+               Adlib.isEmpty(defaultValues.frame4Headline),
+               defaultValues.trigger!="Countdown Timer"];
+     gsap.fromTo("#frame1Background", {scale: 1.2,transformOrigin: "center center"},{scale: 1, duration: 10}); //Zoom out animation
+     tl = gsap.timeline({onComplete: animationEnd});
+     tl.from("#frame1Headline-wrap",{y:-20,opacity:0,duration:0.5})
+       .from(["#ctaText-wrap","#frame1Image4-wrap"],{y:-20,opacity:0,duration:0.4,stagger:0.3,onComplete:function(){
+          if(frames[0]&&frames[1]&&frames[2]&&frames[3]){endWave=true; tl.pause(); animationEnd();}
+          else takeScreenshot();
+       }},'-=0.2')
+       .to("#frame1Headline-wrap",{opacity:0},'+=1.8');
+     if(!frames[0]){
+          tl.from("#frame2Headline-wrap",{y:-20,opacity:0,onComplete:function(){
+               if(frames[1]&&frames[2]&&frames[3]){endWave=true; tl.pause(); animationEnd();}
+               else takeScreenshot();
+          }})
+          .to("#frame2Headline-wrap",{opacity:0,duration:0.5},'+=1.5')
+     }       
+     tl.from("#frame3Background-wrap",{opacity:0,duration:0.5},'-=0.5')
+       .to("#ctaText-wrap",{opacity:0,duration:0.5},'-=0.5')
+       .set("#ctaText-wrap",{left:"90px"})
+       .from("#logo2-wrap",{opacity:0,duration:0.5});
+     if(!frames[1]){
+          tl.fromTo(["#frame3Headline-wrap","#icon1-content","#icon2-content","#icon3-content","#ctaText-wrap"],{y:-20,opacity:0},{y:0,opacity:1,duration:0.4,stagger:0.3,onComplete:function(){
+               if(frames[2]&&frames[3]){endWave=true; tl.pause(); animationEnd();}
+               else if(frames[2]&&!frames[3]){endWave=true; takeScreenshot();}
+               else {takeScreenshot();}
+          }},'-=0.5')
+            .to(["#frame3Headline-wrap","#icon1-content","#icon2-content","#icon3-content"],{opacity:0,duration:0.5},'+=1.15');
+     }
+     if(frames[1]){
+          tl.fromTo(["#frame4Headline-wrap","#frame4Subheadline-content","#ctaText-wrap"],{y:-20,opacity:0,},{y:0,opacity:1,stagger:0.3,duration:0.4,onStart:function(){
+               endWave=true;
+               if(frames[2]) {tl.seek("skipF4");} //SKIP FRAME4
+          }})
+     }else{
+          tl.fromTo(["#frame4Headline-wrap","#frame4Subheadline-content"],{y:-20,opacity:0,},{y:0,opacity:1,stagger:0.3,duration:0.4,onStart:function(){
+               endWave=true;
+               if(frames[2]) tl.seek("skipF4"); //SKIP FRAME4
+          }})
+     }
+     tl.to("#ctaText-wrap",{scale:1.2,duration:0.4})
+       .to("#ctaText-wrap",{scale:1,duration:0.4,onComplete:function(){
+          if(frames[3]) {tl.pause(); animationEnd();}
+          else takeScreenshot();
+       }},'-=0.25')
+       .to(["#frame4Headline-wrap","#frame4Subheadline-content"],{opacity:0,duration:0.5},'+=1.1')
+       .addLabel("skipF4",">");
+     if(frames[1]&&frames[2]){
+          tl.fromTo(["#frame5Headline-wrap","#cdTimer-wrap","#ctaText-wrap"],{y:-20,opacity:0},{y:0,opacity:1,duration:0.4,stagger:0.3,onStart:function(){
+               CountDownTimer();
+          }});
+     }else{
+          tl.fromTo(["#frame5Headline-wrap","#cdTimer-wrap"],{y:-20,opacity:0},{y:0,opacity:1,duration:0.4,stagger:0.3,onStart:function(){
+               CountDownTimer();
+          }});
+     }
+
+     var waves = gsap.timeline(),
+         finalwaves = gsap.timeline({paused: true});
+     waves.from("#wave1", {x: 22, y: -31, opacity: 0, duration: 2})
+         .to("#wave1", {opacity: 0, duration: 0.5},'-=0.5')
+         .from("#wave2", {x: 22, y: -31, opacity: 0, duration: 2},'-=1')
+         .to("#wave2", {opacity: 0, duration: 0.5},'-=0.5')
+         .from("#wave3", {x: 22, y: -31, opacity: 0, duration: 2},'-=1')
+         .to("#wave3", {opacity: 0, duration: 0.5},'-=0.5')
+         .fromTo("#wave1",{x: 22, y: -31, opacity: 0}, {y: 0, opacity: 1, duration: 2, onStart: function(){
+          if(!endWave) waves.seek(2);
+          else{
+               finalwaves.resume();
+               waves.kill();
+               finalwaves.fromTo("#wave1",{x: 22, y: -31, opacity: 0}, {x: 0, y: 0, opacity: 1, duration: 1.5},'-=0.75')
+               .fromTo("#wave2",{x: 22, y: -31, opacity: 0}, {x: 10, y:-14, opacity: 1, duration: 1.5},'-=0.75')
+               .fromTo("#wave3",{x: 22, y: -31, opacity: 0}, {x:23, y: -30, opacity: 1, duration: 1.5},'-=1');
+          }
+         }},'-=1');
+}
+function animationEnd() {
+     // call this function on the very end of the last animation.     
+     takeScreenshot();
+     setTimeout(function() {adlibEnd();},1000);
+}
+function initializeValues(){
+     // SET TEXT
+     // Bold font = elBold. Regular font = elReg.
+     var elBold = ["frame1Headline","frame2Headline","frame3Headline","frame4Headline","frame5Headline","frame4Subheadline",
+                    "days-wrap","hours-wrap","mins-wrap","secs-wrap"],
+         elReg = ["frame3Subheadline","frame3Subheadline2","frame3Subheadline3","ctaText"],
+         boldFont = (defaultValues.fontName==="Ambit Font")?"ambit-bold":"tuitype-bold",
+         regFont = (defaultValues.fontName==="Ambit Font")?"ambit-regular":"tuitype-regular";
+     // Set bold class to text
+     elBold.map(function(el){
+          var element = document.getElementById(el);
+          if(element) element.className += " " + boldFont;
+     });
+     // Set regular class to text
+     elReg.map(function(el){
+          var element = document.getElementById(el);
+          if(element) element.className += " " + regFont;
+     });
+     // SET COLORS
+     //Countdown Timer Colors
+     gsap.set([".dateNums",".dateWords"],{color: defaultValues.customVariable2},0);
+     gsap.set([".lineVertical1",".lineVertical2",".lineVertical3"],{background: defaultValues.customVariable2},0);
+     //CTA Color
+     gsap.set("#ctaText-wrap",{background: defaultValues.ctaColor1},0);
+     //SET Opacity 0
+     gsap.set(["#icon1-content","#icon2-content","#icon3-content",
+               "#frame4Headline-wrap","#frame4Subheadline-content",
+               "#frame5Headline-wrap","#cdTimer-wrap"],{opacity:0},0);
+}
+function CountDownTimer(){
+     //TIMER
+     var countDownDate = new Date(defaultValues.endDate);
+     // Update the count down every 1 second
+     var x = setInterval(function() {
+          var time = getTimeRemaining(countDownDate);
+          // If the count down is over, write some text
+          if (time.total < 0) {
+               clearInterval(x);
+               x = null;
+               document.getElementById("secs").innerHTML = "00";
+               document.getElementById("mins").innerHTML = "00";
+               document.getElementById("hours").innerHTML = "00";
+               document.getElementById("days").innerHTML = "00";
+          } else {
+               document.getElementById("secs").innerHTML = time.seconds;
+               document.getElementById("mins").innerHTML = time.minutes;
+               document.getElementById("hours").innerHTML = time.hours;
+               document.getElementById("days").innerHTML = time.days;
+          }
+     }, 41.666666666666667);
+     // 41.666666666666667 is equivalent of 24 FPS
+     // Avoid lowering the interval time, this will affect the browser performance.
+}
+function addZero(x, n) {
+     while (x.toString().length < n) {
+          x = "0" + x;
+     }
+     return x;
+}
+function getTimeRemaining(endtime){
+     const deadline = new Date(endtime).getTime(),
+           today = new Date().getTime(),
+           total = deadline - today,
+           seconds = addZero(Math.floor( (total/1000) % 60 ), 2),
+           minutes = addZero(Math.floor( (total/1000/60) % 60 ), 2),
+           hours = addZero(Math.floor( (total/(1000*60*60)) % 24 ), 2),
+           days = addZero(Math.floor( total/(1000*60*60*24)), 2);
+     return {total,days,hours,minutes,seconds};
+}
+function adjustFont(){
+     //ADJUST CTA TUI FONT
+     var el = document.getElementById("mainContent"),
+         classes = ["iphoneChrome","iphoneSafari","ipadChrome","ipadSafari","androidPhoneChrome"];
+     if(defaultValues.fontName==="TUI Type Font"){
+          if(hasClass(el, "macFirefox") || hasClass(el, "winFirefox") || hasClass(el, "androidTabletChrome") || hasClass(el, "androidPhoneChrome")) document.querySelector("#ctaText").style.top = "0.15em";               
+          else if(hasClass(el, "winChrome")) document.querySelector("#ctaText").style.top = "0.2em";
+          else document.querySelector("#ctaText").style.top = "0px";
+     }else{
+          if(hasClass(el, "winFirefox")) document.querySelector("#ctaText").style.top = "0px";
+          else{
+               for(var i = 0, j = classes.length; i < j; i++) {
+                   if(hasClass(el, classes[i])) {
+                       document.querySelector("#ctaText").style.top = "0.05em";
+                   }
+               }
+          }          
+     }
+     function hasClass(element, className) {
+         return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+     }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0150)https://s0.2mdn.net/sadbundle/1336878830136066048/interes_paris-English-320x100-638760025882775466-bc0b91da-8fb2-4e48-a4b2-3b3686e04c75.html?ev=01_253 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>BannerFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript">var clickTag = '';</script>
+    <style type="text/css" media="screen">
+        html, body, div {
+            margin: 0;
+            padding: 0;
+            border: 0
+        }
+
+        body {
+            overflow: hidden
+        }
+    </style>
+<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    var isNewtonTokenSet = false;
+    var isTurtleXAdClick = false;
+    var reportingIds = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+
+            if (clkTag.eTldPlusOne) {
+              eTldPlusOnes[clkTag.url] = clkTag.eTldPlusOne;
+            }
+            if (clkTag.reportingId) {
+              reportingIds[clkTag.url] = clkTag.reportingId;
+            }
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+      if (isNewtonEnabled(eventData) && !isNewtonTokenSet) {
+        var newtonOt2Token = eventData.newtonOt2Token;
+        enableAttributionReportingApi(newtonOt2Token);
+      }
+      if (eventData.isTurtleXAdClick) {
+        isTurtleXAdClick = true;
+      }
+    };
+
+    var isNewtonEnabled = function(eventData) {
+      return 'newtonOt2Token' in eventData;
+    }
+
+    var enableAttributionReportingApi = function(originTrialToken) {
+      if (/Chrome/.test(window.navigator.userAgent)) {
+        var meta = document.createElement('meta');
+        meta.httpEquiv = 'origin-trial';
+        meta.content = String(originTrialToken);
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        isNewtonTokenSet = true;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          if (isTurtleXAdClick && !!reportingIds[url]) {
+            var message = {
+              'reportingId': reportingIds[url],
+              'clickX': urlParamMap[CLICK_X_URL_KEY],
+              'clickY': urlParamMap[CLICK_Y_URL_KEY],
+              'creativeDims': getCreativeDimensions()
+              };
+            parent.postMessage(JSON.stringify(message), '*');
+          }
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            var windowFeatures = '';
+
+            if (features) {
+              windowFeatures = windowFeatures.concat(features);
+            }
+            if (isNewtonTokenSet &&
+                !!document.featurePolicy?.allowedFeatures().includes(
+                  'attribution-reporting')) {
+              if (features) {
+                if (!features.includes('attributionsrc')) {
+                  windowFeatures = windowFeatures.concat(features, ', attributionsrc');
+                }
+              } else {
+                windowFeatures = windowFeatures.concat('attributionsrc');
+              }
+            }
+
+            if (windowFeatures) {
+              args.push(windowFeatures);
+            }
+            open.apply(window,args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script><meta http-equiv="origin-trial" content="A4AD7vbM2W0e5fHylDM4fFrsUvtmQ95U+ZVrdOdh3fgH0l0e7RVkAsZryrSQIRhPVvmC60wTlh880eDyo+HpXQAAAABueyJvcmlnaW4iOiJodHRwczovL3MwLjJtZG4ubmV0OjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><link rel="preload" as="script" href="https://c.bannerflow.net/scripts/widget.75463e28adfef1dc400f.js"><link rel="preload" as="script" href="https://c.bannerflow.net/scripts/feed.578faa204bccac981269.js"><script charset="utf-8" type="application/javascript" src="./data.0000003EC968FD.js.download"></script><script charset="utf-8" type="application/javascript" src="./animated-creative.d46ae9d20dd7975e4b3a.js.download"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1243.0" data-gr-ext-installed="">
+    <script>var onClickTag=window.setInterval(function (){if (window.clickTag){clearInterval(onClickTag); var c=document.createElement('div'); c.setAttribute('id', 'bannerflow'); document.body.appendChild(c); var s=document.createElement('script'); var scriptUri='https://c.bannerflow.net/a/67bc6d0f3a310e8b5745ed28?did=5ced17d285b1c200019c3fe1&deeplink=on&'; s.setAttribute('src', scriptUri + '&redirecturl=' + encodeURIComponent(window.clickTag)); document.body.appendChild(s);}}, 50);</script>
+
+<div id="bannerflow"></div><script src="./67bc6d0f3a310e8b5745ed28" data-rendered="true"></script><div style="display: inline-block; width: 320px; height: 100px; position: relative; padding: 0px; margin: 0px;"><iframe src="./saved_resource(1).html" scrolling="no" style="height: 1px; width: 1px; min-height: 100%; max-width: 100%; min-width: 100%; filter: none; transform: none; border: none; outline: none; display: block; position: absolute; opacity: 1; top: 0px; left: 0px; transform-origin: 0px 0px; transition: opacity 0.2s;"></iframe></div><iframe style="position: absolute; pointer-events: none; left: 0px; top: 0px; opacity: 0; height: 0px; width: 0px;" src="./saved_resource(2).html"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
