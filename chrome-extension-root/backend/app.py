@@ -12,6 +12,17 @@ from epc_address_fetcher.epc_address_query import query_epc_by_postcode_and_rati
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://www.rightmove.co.uk"}})
 
+epc_register_username, epc_register_api_key = load_credentials()
+
+def load_epc_register_credentials(file_path="epc_address_fetcher/epc_cred.txt"):
+    creds = {}
+    with open(file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if "=" in line:
+                key, value = line.strip().split("=", 1)
+                creds[key.strip()] = value.strip()
+    return creds["username"], creds["api_key"]
+
 @app.route("/add-rightmove", methods=["POST"])
 def add_rightmove():
     data = request.get_json()
@@ -68,6 +79,8 @@ def epc_background_worker(poll_interval=20):
                             entry["postcode"],
                             entry.get("current"),
                             entry.get("potential"),
+                            epc_register_username, 
+                            epc_register_api_key
                         )
                         update_entry_data(url, "address_results", addresses)
                         update_step_flag(url, "epc_address_fetched", True)
