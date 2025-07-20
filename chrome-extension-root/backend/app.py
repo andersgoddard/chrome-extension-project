@@ -35,12 +35,7 @@ def add_rightmove():
         "url": data["url"],
         "postcode": data["postcode"],
         "epc_url": data["epc_url"],
-        "status": {
-            "page_read": True,  # since this endpoint means page read already done
-            "epc_read": False,
-            "addresses_fetched": False,
-            "complete": False
-        }
+        # No more 'status'
     }
 
     added = add_entry(entry)
