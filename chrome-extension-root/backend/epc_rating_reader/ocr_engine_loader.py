@@ -1,12 +1,12 @@
-from epc_ocr_interface import EasyOCREngine, TesseractOCREngine, ChatGPTEngine
+from epc_rating_reader.epc_ocr_interface import EasyOCREngine, TesseractOCREngine, ChatGPTEngine
 
 def OCREngine():
     try:
-        with open("helpers/ocr_engine.txt", "r") as f:
+        with open("ocr_engine.txt", "r") as f:
             engine_name = f.read().strip().lower()
             print(engine_name)
     except FileNotFoundError:
-        engine_name = "easyocr"
+        engine_name = "chatgpt"
         print(engine_name)
 
     engine_map = {

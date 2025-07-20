@@ -1,4 +1,4 @@
-from epc_ocr_interface import EasyOCREngine, TesseractOCREngine, ChatGPTEngine
+from epc_rating_reader.epc_ocr_interface import EasyOCREngine, TesseractOCREngine, ChatGPTEngine
 
 def OCREngine():
     try:

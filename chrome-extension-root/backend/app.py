@@ -1,6 +1,13 @@
+import os
+import threading
+import time
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from data_store import add_entry, load_data
+
+from data_store import add_entry, load_data, update_step_flag, update_entry_data
+from epc_rating_reader.epc_rating_reader import fetch_epc_ratings
+from epc_rating_reader.ocr_engine_loader import OCREngine
+from epc_address_fetcher.epc_address_query import query_epc_by_postcode_and_rating
 
 app = Flask(__name__)
 CORS(app)
@@ -17,7 +24,12 @@ def add_rightmove():
         "url": data["url"],
         "postcode": data["postcode"],
         "epc_url": data["epc_url"],
-        "consumed": False
+        "status": {
+            "page_read": True,  # since this endpoint means page read already done
+            "epc_read": False,
+            "addresses_fetched": False,
+            "complete": False
+        }
     }
 
     added = add_entry(entry)
@@ -27,6 +39,51 @@ def add_rightmove():
 def get_entries():
     return jsonify(load_data())
 
+def epc_background_worker(poll_interval=20):
+    reader = OCREngine()
+
+    while True:
+        time.sleep(poll_interval)
+        try:
+            entries = load_data()
+            for entry in entries:
+                url = entry["url"]
+                steps = entry.get("steps", {})
+
+                # Step 2: Read EPC ratings if not done
+                if steps.get("epc_url_extracted", False) and not steps.get("epc_ratings_fetched", False):
+                    try:
+                        current, potential = fetch_epc_ratings(entry["epc_url"], reader)
+                        update_entry_data(url, "current", current)
+                        update_entry_data(url, "potential", potential)
+                        update_step_flag(url, "epc_ratings_fetched", True)
+                        print(f"[INFO] EPC ratings fetched for {url}")
+                    except Exception as e:
+                        print(f"[ERROR] EPC read failed for {url}: {e}")
+
+                # Step 3: Fetch full addresses
+                if steps.get("epc_ratings_fetched", False) and not steps.get("epc_address_fetched", False):
+                    try:
+                        addresses = query_epc_by_postcode_and_rating(
+                            entry["postcode"],
+                            entry.get("current"),
+                            entry.get("potential"),
+                        )
+                        update_entry_data(url, "address_results", addresses)
+                        update_step_flag(url, "epc_address_fetched", True)
+                        print(f"[INFO] Addresses fetched for {url}")
+                    except Exception as e:
+                        print(f"[ERROR] Addresses fetch failed for {url}: {e}")
+
+                # Step 4: Mark complete
+                if steps.get("epc_address_fetched", False) and not steps.get("completed", False):
+                    update_step_flag(url, "completed", True)
+                    print(f"[INFO] Record complete for {url}")
+
+        except Exception as outer:
+            print(f"[ERROR] EPC worker error: {outer}")
+
 if __name__ == "__main__":
+    threading.Thread(target=epc_background_worker, daemon=True).start()
     port = int(os.environ.get("PORT", 5000))
-    app.run(debug=False, host="0.0.0.0")
+    app.run(debug=False, host="0.0.0.0", port=port)
