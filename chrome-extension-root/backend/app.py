@@ -23,6 +23,9 @@ def load_epc_register_credentials(file_path="epc_address_fetcher/epc_cred.txt"):
 
 @app.route("/add-rightmove", methods=["POST", "OPTIONS"])
 def add_rightmove():
+    if request.method == 'OPTIONS':
+        return '', 204
+
     data = request.get_json()
     required = {"url", "postcode", "epc_url"}
 

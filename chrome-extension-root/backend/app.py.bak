@@ -75,7 +75,24 @@ def epc_background_worker(poll_interval=20):
                             epc_register_username, 
                             epc_register_api_key
                         )
-                        update_entry_data(url, "address_results", addresses)
+                        
+                        matches = []
+                        for r in addresses:
+                            address_parts = [
+                                r.get("address"),
+                                r.get("town"),
+                                r.get("local-authority-label"),
+                                r.get("postcode")
+                            ]
+                            full_address = ", ".join(part for part in address_parts if part and part.strip())
+
+                            matches.append({
+                                "address": full_address,
+                                "current_rating": r.get("current-energy-efficiency"),
+                                "potential_rating": r.get("potential-energy-efficiency")
+                            })
+
+                        update_entry_data(url, "address_results", matches)
                         update_step_flag(url, "epc_address_fetched", True)
                         print(f"[INFO] Addresses fetched for {url}")
                     except Exception as e:

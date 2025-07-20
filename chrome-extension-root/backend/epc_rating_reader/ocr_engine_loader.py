@@ -1,4 +1,4 @@
-from epc_rating_reader.epc_ocr_interface import EasyOCREngine, TesseractOCREngine, ChatGPTEngine
+from epc_rating_reader.epc_ocr_interface import ChatGPTEngine
 
 def OCREngine():
     try:
@@ -10,9 +10,9 @@ def OCREngine():
         print(engine_name)
 
     engine_map = {
-        "easyocr": EasyOCREngine,
-        "tesseract": TesseractOCREngine,
+        # "easyocr": EasyOCREngine,
+        # "tesseract": TesseractOCREngine,
         "chatgpt": ChatGPTEngine
     }
 
-    return engine_map.get(engine_name, EasyOCREngine)()
+    return engine_map.get(engine_name, ChatGPTEngine)()

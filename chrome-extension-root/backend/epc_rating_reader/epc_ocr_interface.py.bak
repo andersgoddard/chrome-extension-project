@@ -13,7 +13,7 @@ from openai import OpenAI
 
 class BaseOCREngine(ABC):
     @abstractmethod
-    def readtext(self, image_url: str) -> dict:
+    def readtext(self, image_url: str) -> List[Tuple[Tuple[int, int, int, int], str, float]]:
         """
         Perform OCR on the given image and return a list of:
         (bounding_box, text, confidence)
