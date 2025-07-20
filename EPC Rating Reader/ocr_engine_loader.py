@@ -2,7 +2,7 @@ from epc_ocr_interface import EasyOCREngine, TesseractOCREngine, ChatGPTEngine
 
 def OCREngine():
     try:
-        with open("data/ocr_engine.txt", "r") as f:
+        with open("ocr_engine.txt", "r") as f:
             engine_name = f.read().strip().lower()
             print(engine_name)
     except FileNotFoundError:

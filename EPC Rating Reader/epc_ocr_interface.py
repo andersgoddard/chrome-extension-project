@@ -1,10 +1,12 @@
-from abc import ABC, abstractmethod
-from typing import List, Tuple
 import numpy as np
 import requests
 import json
 import base64
 import re
+import os 
+
+from abc import ABC, abstractmethod
+from typing import List, Tuple
 from io import BytesIO
 from PIL import Image
 from openai import OpenAI
@@ -52,7 +54,7 @@ class TesseractOCREngine(BaseOCREngine):
 
 class ChatGPTEngine(BaseOCREngine):
     def __init__(self):
-        self.api_key = "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"
+        self.api_key = os.getenv("OPENAI_API_KEY")
         self.client = OpenAI(api_key=self.api_key)
         self.model = "gpt-4o-mini"  # Vision-capable model
 
@@ -69,7 +71,7 @@ class ChatGPTEngine(BaseOCREngine):
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": "Analyze this EPC image and return current and potential EPC ratings in JSON."},
+                    {"type": "text", "text": "Analyze this EPC image and return current and potential EPC ratings in JSON. I only need the numeric ratings and please use only current and potential as keys. Sometimes there are two charts, in which case the one to look at is the Energy Efficiency Rating chart."},
                     {"type": "image_url", "image_url": {"url": image_url}}
                 ]
             }
