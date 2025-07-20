@@ -39,15 +39,6 @@ def add_rightmove():
 def get_entries():
     return jsonify(load_data())
 
-def update_step_flag(url, step_name, value):
-    data = load_data()
-    for entry in data:
-        if entry["url"] == url:
-            entry.setdefault("steps", {})
-            entry["steps"][step_name] = value
-            break
-    save_data(data)
-
 def epc_background_worker(poll_interval=20):
     reader = OCREngine()
 

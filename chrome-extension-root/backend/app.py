@@ -10,7 +10,7 @@ from epc_rating_reader.ocr_engine_loader import OCREngine
 from epc_address_fetcher.epc_address_query import query_epc_by_postcode_and_rating
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://www.rightmove.co.uk"}})
 
 @app.route("/add-rightmove", methods=["POST"])
 def add_rightmove():
