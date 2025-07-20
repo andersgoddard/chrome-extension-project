@@ -1,0 +1,1197 @@
+[
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1GD",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164215121#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 2PW",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164722175#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 2NJ",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164732411#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1SQ",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164727476#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1UB",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164261861#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1HP",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164710928#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Flat 55, Spinnaker House, Juniper Drive, Wandsworth, SW18 1FS",
+        "current_rating": "79",
+        "potential_rating": "80"
+      }
+    ],
+    "current": 79,
+    "epc_url": "https://media.rightmove.co.uk/146k/145463/164709527/145463_HEA174848_L_EPC_00_0000.PNG",
+    "postcode": "SW18 1FS",
+    "potential": 80,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164709527#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 3BN",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164708036#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "14 Peachey House, 29 Eltringham Street, Wandsworth, SW18 1GQ",
+        "current_rating": "81",
+        "potential_rating": "81"
+      },
+      {
+        "address": "17 Peachey House, 29 Eltringham Street, Wandsworth, SW18 1GQ",
+        "current_rating": "81",
+        "potential_rating": "81"
+      },
+      {
+        "address": "17 Peachey House, 29, Eltringham Street, Wandsworth, SW18 1GQ",
+        "current_rating": "81",
+        "potential_rating": "81"
+      },
+      {
+        "address": "18 Peachey House, 29, Eltringham Street, Wandsworth, SW18 1GQ",
+        "current_rating": "81",
+        "potential_rating": "81"
+      }
+    ],
+    "current": 81,
+    "epc_url": "https://media.rightmove.co.uk/53k/52448/164705528/52448_34047356_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 1GQ",
+    "potential": 81,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164705528#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "5 Tilemakers Yard, 2a, Isis Street, Wandsworth, SW18 3QN",
+        "current_rating": "83",
+        "potential_rating": "93"
+      }
+    ],
+    "current": 83,
+    "epc_url": "https://media.rightmove.co.uk/279k/278072/164702273/278072_34047133_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 3QN",
+    "potential": 93,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164702273#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1PS",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/163183571#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "33A ASTONVILLE STREET, LONDON, Wandsworth, SW18 5AN",
+        "current_rating": "65",
+        "potential_rating": "71"
+      },
+      {
+        "address": "39, Astonville Street, Wandsworth, SW18 5AN",
+        "current_rating": "65",
+        "potential_rating": "71"
+      }
+    ],
+    "current": 65,
+    "epc_url": "https://media.rightmove.co.uk/188k/187115/164691974/187115_34046505_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 5AN",
+    "potential": 71,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164691974#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "2 Dault Road, Wandsworth, SW18 2NQ",
+        "current_rating": "56",
+        "potential_rating": "75"
+      }
+    ],
+    "current": 56,
+    "epc_url": "https://media.rightmove.co.uk/50k/49027/164686763/49027_WAS180029_L_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 2NQ",
+    "potential": 75,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164686763#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "184a St. Ann's Hill, Wandsworth, SW18 2RT",
+        "current_rating": "70",
+        "potential_rating": "76"
+      },
+      {
+        "address": "194, St. Ann's Hill, Wandsworth, SW18 2RT",
+        "current_rating": "70",
+        "potential_rating": "76"
+      }
+    ],
+    "current": 70,
+    "epc_url": "https://media.rightmove.co.uk/291k/290381/164685188/290381_706178_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 2RT",
+    "potential": 76,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164685188#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Apartment 82 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 53 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 71 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 62 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 110 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 106 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 107 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 93 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 96 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 92 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 97 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 100 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 101 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 104 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 88 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 78 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 72 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 54 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 63 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 59 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 51 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 68 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Apartment 43 Discovery House, Juniper Drive, Wandsworth, SW18 1XY",
+        "current_rating": "85",
+        "potential_rating": "85"
+      }
+    ],
+    "current": 85,
+    "epc_url": "https://media.rightmove.co.uk/192k/191471/164621156/191471_34042511_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 1XY",
+    "potential": 85,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164621156#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Flat 40, 17 Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 44, 17 Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 19, 17 Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 30, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 33, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 34, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 28, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 13, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 18, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 23, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 12, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 26, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 45, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      },
+      {
+        "address": "Flat 17, 17, Hardwicks Square, Wandsworth, SW18 4AG",
+        "current_rating": "84",
+        "potential_rating": "85"
+      }
+    ],
+    "current": 84,
+    "epc_url": "https://media.rightmove.co.uk/146k/145463/163432901/145463_WLS250270_L_EPC_00_0000.PNG",
+    "postcode": "SW18 4AG",
+    "potential": 85,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/163432901#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "26b Knoll Road, Wandsworth, SW18 2DF",
+        "current_rating": "61",
+        "potential_rating": "74"
+      }
+    ],
+    "current": 61,
+    "epc_url": "https://media.rightmove.co.uk/15k/14116/164683718/14116_LONDO_003537_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 2DF",
+    "potential": 74,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164683718#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Flat 5, 247 Wimbledon Park Road, Wandsworth, SW18 5RJ",
+        "current_rating": "42",
+        "potential_rating": "78"
+      }
+    ],
+    "current": 42,
+    "epc_url": "https://media.rightmove.co.uk/13k/12687/164682338/12687_GER247825_L_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 5RJ",
+    "potential": 78,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164682338#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": 73,
+    "epc_url": "https://media.rightmove.co.uk/75k/74431/164681024/74431_34045795_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 5RS",
+    "potential": 74,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164681024#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "86 Aurora Apartments, 10 Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "71 Aurora Apartments, 10 Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "66 Aurora Apartments, 10 Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "50 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "51 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "1 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "29 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "22 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "43 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "15 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "36 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "8 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "89 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "85 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "92 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "44 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "68 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "72 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "63 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "78 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "87 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "73 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "64 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "67 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "77 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "80 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      },
+      {
+        "address": "75 Aurora Apartments, 10, Buckhold Road, Wandsworth, SW18 4FW",
+        "current_rating": "85",
+        "potential_rating": "85"
+      }
+    ],
+    "current": 85,
+    "epc_url": "https://media.rightmove.co.uk/72k/71612/164678930/71612_PB10951_EPC_00_0000.jpg",
+    "postcode": "SW18 4FW",
+    "potential": 85,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164678930#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Flat 517, Omega Building, Smugglers Way, Wandsworth, SW18 1AZ",
+        "current_rating": "77",
+        "potential_rating": "84"
+      }
+    ],
+    "current": 77,
+    "epc_url": "https://media.rightmove.co.uk/139k/138215/164676179/138215_100783016813_EPCGRAPH_00_0000.jpeg",
+    "postcode": "SW18 1AZ",
+    "potential": 84,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164676179#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1HN",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164671208#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "20 Witham House, 13 Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "58 Witham House, 13 Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "36 Witham House, 13 Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "34 Witham House, 13 Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "3 Witham House, 13 Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "7 Witham House, 13 Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "56 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "52 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "27 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "47 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "42 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "7 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "22 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "12 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "73 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "69 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "17 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "32 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "77 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      },
+      {
+        "address": "37 Witham House, 13, Enterprise Way, Wandsworth, SW18 1GB",
+        "current_rating": "83",
+        "potential_rating": "83"
+      }
+    ],
+    "current": 83,
+    "epc_url": "https://media.rightmove.co.uk/86k/85765/164670251/85765_000004056p_EPC_00_0000.jpg",
+    "postcode": "SW18 1GB",
+    "potential": 83,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164670251#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Apartment 6, 1, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 5, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 12, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 2, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 8, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 1, 1, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 4, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 23, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 21, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 13, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 3, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 17, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 11, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 15, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 26, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 19, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 27, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 9, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 12, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 7, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 24, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 2, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      },
+      {
+        "address": "Apartment 18, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "86",
+        "potential_rating": "86"
+      }
+    ],
+    "current": 86,
+    "epc_url": "https://media.rightmove.co.uk/86k/85765/164666558/85765_000014815p_EPC_00_0000.jpg",
+    "postcode": "SW18 1SF",
+    "potential": 86,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164666558#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "Apartment 7, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 3, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 6, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 4, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 9, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 4, 1, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 1, 3, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 16, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 10, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 20, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 22, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 14, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      },
+      {
+        "address": "Apartment 8, 2, Drapers Yard, Wandsworth, SW18 1SF",
+        "current_rating": "87",
+        "potential_rating": "87"
+      }
+    ],
+    "current": 87,
+    "epc_url": "https://media.rightmove.co.uk/86k/85765/164666276/85765_000013904p_EPC_00_0000.PNG",
+    "postcode": "SW18 1SF",
+    "potential": 87,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164666276#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 5QW",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/162824444#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1GG",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164143604#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 4UW",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/163615292#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1GJ",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164650802#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 5LY",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164650076#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 1HW",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164645162#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 3QL",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164644631#/?channel=RES_LET"
+  },
+  {
+    "address_results": [
+      {
+        "address": "84 Sutherland Grove, Wandsworth, SW18 5QW",
+        "current_rating": "55",
+        "potential_rating": "73"
+      }
+    ],
+    "current": 55,
+    "epc_url": "https://media.rightmove.co.uk/16k/15963/163919492/15963_1331776_EPC_00_0005.gif",
+    "postcode": "SW18 5QW",
+    "potential": 73,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/163919492#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": null,
+    "postcode": "SW18 4UL",
+    "potential": null,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164642906#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": 58,
+    "epc_url": "https://media.rightmove.co.uk/270k/269756/164106218/269756_SFL250012_L_EPCGRAPH_00_0000.png",
+    "postcode": "SW18 5AL",
+    "potential": 65,
+    "steps": {
+      "completed": true,
+      "epc_address_fetched": true,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164106218#/?channel=RES_LET"
+  },
+  {
+    "address_results": [],
+    "current": null,
+    "epc_url": "https://media.rightmove.co.uk/252k/251054/164637419/251054_ER170725BGT_EPC_00_0000.pdf",
+    "postcode": "SW18 4TW",
+    "potential": null,
+    "steps": {
+      "completed": false,
+      "epc_address_fetched": false,
+      "epc_ratings_fetched": true,
+      "epc_url_extracted": true
+    },
+    "url": "https://www.rightmove.co.uk/properties/164637419#/?channel=RES_LET"
+  }
+]

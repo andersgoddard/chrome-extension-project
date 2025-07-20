@@ -2,14 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("toggle-btn");
 
   chrome.storage.local.get(["monitoring"], (res) => {
-    let state = res.monitoring;
-	
-	// If undefined, default to false
-	if (state == undefined) {
-		state = false;
-		chrome.storage.local.set({ monitoring: state });
-	}
-	
+    const state = res.monitoring || false;
     btn.textContent = state ? "Stop Monitoring" : "Start Monitoring";
   });
 
