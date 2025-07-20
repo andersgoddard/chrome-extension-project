@@ -1,11 +1,14 @@
 from epc_ocr_interface import ChatGPTEngine
 
 def main():
+    # Replace with your actual OpenAI API key
+    api_key = "sk-your_openai_api_key_here"
+
     # The EPC image URL to analyze
     epc_image_url = "https://media.rightmove.co.uk/31k/30575/164542931/30575_05310827_EPCGRAPH_00_0000.jpeg"
 
     # Instantiate your OCR engine
-    engine = ChatGPTEngine()
+    engine = ChatGPTEngine(api_key)
 
     # Call the readtext method with the image URL
     result = engine.readtext(epc_image_url)

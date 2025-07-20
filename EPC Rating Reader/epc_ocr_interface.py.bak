@@ -2,9 +2,11 @@ from abc import ABC, abstractmethod
 from typing import List, Tuple
 import numpy as np
 import requests
+import json
 import base64
 from io import BytesIO
 from PIL import Image
+from openai import OpenAI
 
 class BaseOCREngine(ABC):
     @abstractmethod
@@ -49,81 +51,48 @@ class TesseractOCREngine(BaseOCREngine):
 
 class ChatGPTEngine(BaseOCREngine):
     def __init__(self):
-        """
-        Initialize the ChatGPTEngine with the OpenAI API key and model.
-        :param api_key: Your OpenAI API key
-        :param model: The model to use for the API call (default is gpt-4)
-        """
-        self.api_key = ""
-        self.model = "gpt-4o"
-        self.api_url = 'https://api.openai.com/v1/chat/completions'  # Use the correct endpoint for image analysis
+        self.api_key = "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"
+        self.client = OpenAI(api_key=self.api_key)
+        self.model = "gpt-4o-mini"  # Vision-capable model
 
-    def readtext(self, image: np.ndarray) -> List[Tuple[Tuple[int, int, int, int], str, float]]:
+    def readtext(self, image_url: str):
         """
-        Send the image directly to the ChatGPT API for analysis.
+        Sends an image URL plus prompt to the GPT vision model,
+        returns parsed JSON or raw string response.
         """
-        image_data = self._image_to_base64(image)
-        ocr_data = self.send_to_api(image_data)
-        return ocr_data
+        messages = [
+            {
+                "role": "system",
+                "content": "You are an assistant that reads and extracts data from EPC graphs."
+            },
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": "Analyze this EPC image and return current and potential EPC ratings in JSON."},
+                    {"type": "image_url", "image_url": {"url": image_url}}
+                ]
+            }
+        ]
 
-    def send_to_api(self, image_data: str):
-        """
-        Send image to the ChatGPT API for analysis (image-to-text processing).
-        :param image_data: Base64 encoded image data
-        """
-        headers = {
-            'Authorization': f'Bearer {self.api_key}',
-            'Content-Type': 'application/json'
-        }
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            max_tokens=300,
+        )
 
-        # Prepare the payload
-        payload = {
-            "model": self.model,  # should be 'gpt-4o' or 'gpt-4-vision-preview'
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You are an assistant analyzing image contents."
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": "Please analyze the content of the image and give me the current and potential EPC ratings. Return this in a json format with current_epc and potential_epc as the keys"
-                        },
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{image_data}"
-                            }
-                        }
-                    ]
-        }
-    ],
-    "max_tokens": 300
-}
+        content = response.choices[0].message.content
+        print("[DEBUG] API response content:", content)
 
-
-        # Send the request to the API
-        response = requests.post(self.api_url, headers=headers, json=payload)
-        
-        if response.status_code == 200:
-            result = response.json()
-            print("Successfully sent image to ChatGPT API.")
-            print(result.get('data', []))
-            return result.get('data', [])
+        # Extract the JSON block between triple backticks
+        match = re.search(r"```json\s*(\{.*?\})\s*```", content, re.DOTALL)
+        if match:
+            json_text = match.group(1)
+            try:
+                data = json.loads(json_text)
+                return data
+            except json.JSONDecodeError:
+                print("Failed to parse JSON block.")
+                return json_text
         else:
-            print(f"Error sending data to API: {response.status_code}, {response.text}")
-            return []
-
-    def _image_to_base64(self, image: np.ndarray) -> str:
-        """
-        Convert the image (numpy array) to a base64 encoded string.
-        :param image: The image in numpy array format.
-        :return: The base64 encoded image string.
-        """
-        pil_image = Image.fromarray(image)  # Convert the NumPy array to a PIL image
-        buffered = BytesIO()
-        pil_image.save(buffered, format="PNG")  # Save the image as PNG in a BytesIO buffer
-        img_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')  # Encode the image to base64
-        return img_base64
+            print("No JSON block found. Returning raw content.")
+            return content
