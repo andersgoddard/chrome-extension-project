@@ -25,9 +25,9 @@ all_outputs = []
 # current = int(row["current_rating"])
 # potential = int(row["potential_rating"])
 
-postcode = "SW18 5QW"
-current = 55
-potential = 73
+postcode = "SW18 1EA"
+current = 65
+potential = 77
 
 results = query_epc_by_postcode_and_rating(postcode, current, potential, username, api_key)
 

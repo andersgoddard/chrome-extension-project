@@ -66,6 +66,7 @@ def epc_background_worker(poll_interval=20):
                         update_step_flag(url, "epc_ratings_fetched", True)
                         print(f"[INFO] EPC ratings fetched for {url}")
                     except Exception as e:
+                        update_step_flag(url, "epc_ratings_fetched", True)
                         print(f"[ERROR] EPC read failed for {url}: {e}")
 
                 # Step 3: Fetch full addresses

@@ -84,8 +84,6 @@ def epc_background_worker(poll_interval=20):
                         for r in addresses:
                             address_parts = [
                                 r.get("address"),
-                                r.get("town"),
-                                r.get("local-authority-label"),
                                 r.get("postcode")
                             ]
                             full_address = ", ".join(part for part in address_parts if part and part.strip())
